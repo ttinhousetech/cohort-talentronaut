@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Program from "@/components/Program";
 import Process from "@/components/Process";
 import WhoItsFor from "@/components/WhoItsFor";
+import CohortOne from "@/components/CohortOne";
 import Commitment from "@/components/Commitment";
 import Results from "@/components/Results";
 import FAQ from "@/components/FAQ";
@@ -18,7 +19,8 @@ export default function Home() {
       <Program />
       <Process />
       <WhoItsFor />
-      <Commitment />
+      <CohortOne />
+      {/* <Commitment /> */}
       <Results />
       <FAQ />
       <CTA />

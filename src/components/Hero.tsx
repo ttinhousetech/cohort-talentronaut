@@ -93,13 +93,6 @@ export default function Hero() {
               <span className="block mb-2 opacity-90 group-hover/hero:opacity-100 transition-opacity">Launch Your</span>
               <span className="relative inline-block text-accent italic">
                 Vision in 11 Days.
-                {/* Light Sweep Effect */}
-                <motion.div 
-                  initial={{ left: "-100%" }}
-                  animate={{ left: "200%" }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 pointer-events-none"
-                />
               </span>
             </motion.h1>
           </div>
@@ -127,17 +120,22 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
             className="mt-16 flex flex-col sm:flex-row gap-8"
           >
-            <button className="group relative bg-[#fff] text-black px-12 py-5 font-bold text-sm tracking-[0.2em] uppercase transition-all hover:bg-accent hover:text-white shadow-[0_0_50px_rgba(255,255,255,0.1)] active:scale-95 w-full sm:w-fit overflow-hidden">
+            <a 
+              href="https://forms.gle/xtfZ7jUtbDcZXCz56"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative bg-[#fff] text-black px-12 py-5 font-bold text-sm tracking-[0.2em] uppercase transition-all hover:bg-accent hover:text-white shadow-[0_0_50px_rgba(255,255,255,0.1)] active:scale-95 w-full sm:w-fit overflow-hidden text-center"
+            >
               <span className="relative z-10 font-black">APPLY NOW</span>
               <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[0.16, 1, 0.3, 1]" />
-            </button>
-            <button className="relative px-12 py-5 text-white/80 font-bold text-sm tracking-[0.2em] uppercase group overflow-hidden border border-white/10 hover:border-white/40 transition-all active:scale-95 flex items-center gap-4 justify-center">
+            </a>
+            {/* <button className="relative px-12 py-5 text-white/80 font-bold text-sm tracking-[0.2em] uppercase group overflow-hidden border border-white/10 hover:border-white/40 transition-all active:scale-95 flex items-center gap-4 justify-center">
               <span className="relative z-10">THE PROCESS</span>
               <motion.div 
                 whileHover={{ width: "100%" }}
                 className="absolute inset-0 bg-white/5 w-0 transition-all duration-500"
               />
-            </button>
+            </button> */}
           </motion.div>
         </div>
 

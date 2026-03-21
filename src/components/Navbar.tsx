@@ -61,9 +61,14 @@ export default function Navbar() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         >
-          <button className="bg-white text-black px-6 py-3 sm:px-8 sm:py-4 text-[10px] font-black tracking-[0.2em] uppercase hover:bg-accent hover:text-white transition-all transform active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+          <a 
+            href="https://forms.gle/xtfZ7jUtbDcZXCz56"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-black px-6 py-3 sm:px-8 sm:py-4 text-[10px] font-black tracking-[0.2em] uppercase hover:bg-accent hover:text-white transition-all transform active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.05)] text-center"
+          >
             APPLY NOW
-          </button>
+          </a>
         </motion.div>
       </div>
     </nav>
