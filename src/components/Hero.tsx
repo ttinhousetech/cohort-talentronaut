@@ -150,9 +150,8 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="grid grid-cols-2 lg:grid-cols-4 w-full border-t border-white/5 mt-20 bg-black/50 backdrop-blur-3xl relative z-30"
+        className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-7xl mx-auto px-0 sm:px-8 mt-16 sm:mt-24 pb-16 relative z-30"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none" />
         {[
           { category: "ACTIVE", label: "GLOBAL APPLICATIONS", color: "text-accent" },
           { category: "11", label: "DAYS TO LAUNCH", color: "text-accent" },
@@ -298,36 +297,40 @@ function FloatingModule({ label, delay, x, y }: { label: string; delay: number; 
 }
 
 function Stat({ category, label, index, color }: { category: string; label: string; index: number; color?: string }) {
-  const borderClasses = `
-    relative flex flex-col items-center justify-center py-14 px-8 border-white/5
-    group/stat overflow-hidden transition-all duration-700
-    ${index % 2 !== 0 ? 'border-l' : ''}
-    ${index >= 2 ? 'border-t lg:border-t-0' : ''}
-    ${index > 0 ? 'lg:border-l' : ''}
+  const containerClasses = `
+    relative flex flex-col items-center justify-center py-12 px-6
+    bg-[#050505]/60 border border-white/[0.08] rounded-[24px]
+    group/stat overflow-hidden transition-all duration-500 
+    hover:bg-[#0a0a0a]/80 hover:border-accent/40 hover:shadow-[0_0_40px_rgba(255,77,41,0.15)]
+    backdrop-blur-xl h-full
   `;
 
   return (
-    <div className={borderClasses}>
-      {/* Background Glow on Hover */}
-      <div className="absolute inset-0 bg-accent/5 translate-y-[100%] group-hover/stat:translate-y-0 transition-transform duration-700 ease-[0.16, 1, 0.3, 1]" />
+    <div className={containerClasses}>
+      {/* Background Reflection Glow */}
+      <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700 ease-out" />
       
-      {/* HUD Corner Accents */}
-      <div className="absolute top-4 left-4 w-2 h-2 border-t border-l border-white/20 opacity-0 group-hover/stat:opacity-100 transition-opacity" />
-      <div className="absolute bottom-4 right-4 w-2 h-2 border-b border-r border-white/20 opacity-0 group-hover/stat:opacity-100 transition-opacity" />
+      {/* Subtle Corner/Edge Accents */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500" />
 
       <motion.span 
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        className={`text-4xl sm:text-5xl lg:text-6xl font-minion ${color || 'text-white'} mb-4 tracking-tighter relative z-10 drop-shadow-2xl`}
+        transition={{ duration: 0.8, delay: index * 0.1 }}
+        className={`text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] font-minion ${color || 'text-white'} mb-3 sm:mb-5 tracking-tight relative z-10 drop-shadow-2xl group-hover/stat:scale-105 transition-transform duration-500 leading-none`}
+        style={{
+          textShadow: "0 0 40px rgba(255, 77, 41, 0.4)",
+        }}
       >
         {category}
       </motion.span>
-      <span className="text-[9px] font-black tracking-[0.4em] text-white/40 text-center uppercase relative z-10 group-hover/stat:text-white/60 transition-colors">
+      <span className="text-[9px] sm:text-[11px] font-black tracking-[0.2em] sm:tracking-[0.4em] text-white/50 text-center uppercase relative z-10 group-hover/stat:text-white/90 transition-colors duration-300">
         {label}
       </span>
-
+      
       {/* Interactive Line Pulse */}
-      <div className="absolute bottom-0 left-0 h-[1px] bg-accent/30 w-0 group-hover/stat:w-full transition-all duration-700" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-accent w-0 group-hover/stat:w-1/2 transition-all duration-700 shadow-[0_0_10px_rgba(255,77,41,0.8)] rounded-full" />
     </div>
   );
 }

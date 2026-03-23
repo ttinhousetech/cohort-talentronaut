@@ -15,18 +15,13 @@ export default function Navbar() {
           transition={{ duration: 0.8 }}
           className="flex items-center gap-3 group cursor-pointer"
         >
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 overflow-hidden bg-white/5 rounded-sm border border-white/10 flex items-center justify-center">
-            <motion.div 
-              animate={{ rotate: 360 }}
-              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity" 
-            />
+          <div className="relative flex items-center justify-center">
             <Image 
               src="/images/newlogo.png" 
               alt="Talentronaut Logo" 
-              width={32} 
-              height={32} 
-              className="relative z-10 w-6 h-6 sm:w-8 sm:h-8 object-contain transition-transform group-hover:scale-110"
+              width={48} 
+              height={48} 
+              className="relative z-10 w-8 h-8 sm:w-10 sm:h-10 object-contain transition-transform duration-300 group-hover:scale-110"
             />
           </div>
           <span className="text-xl sm:text-2xl font-minion text-white tracking-tighter group-hover:text-accent transition-colors">
