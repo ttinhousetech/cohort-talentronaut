@@ -18,6 +18,8 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-black text-white selection:bg-accent selection:text-white">
       <Navbar />
       <Hero />
+      <Clients />
+      <Testimonials />
       <Program />
       <Process />
       <WhoItsFor />
@@ -25,10 +27,7 @@ export default function Home() {
       {/* <Commitment /> */}
       <Results />
       <FAQ />
-      <CTA />
-      <Clients />
-      <Hired />
-      <Testimonials />
+      <CTA />    
       <Footer />
     </main>
   );
