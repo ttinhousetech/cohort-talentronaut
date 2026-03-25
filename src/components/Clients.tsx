@@ -7,46 +7,57 @@ const clients = [
   {
     name: "Yugandhara",
     logo: "/images/clientlogo/yuglogo.png",
+    link: "https://www.yugandhara.com/"
   },
   {
     name: "Vidyabhyasam",
     logo: "/images/clientlogo/vidyabhaysamlogo.png",
+    link: "https://vidyabhyasam.org/"
   },
   {
     name: "ECS Seychelles",
     logo: "/images/clientlogo/ECSLogo.webp",
+    link: "https://ecs.sc/"
   },
   {
     name: "Avenza",
     logo: "/images/newlogo/avenzalogo.png",
+    link: "https://store.avenza.com/?srsltid=AfmBOorT5IL8eBFr128OCDQCnqPLBBFi6nwuvLMv-ViwraRDEENMkHJG"
   },
   {
     name: "Kylro",
     logo: "/images/newlogo/kylrologo.png",
+    link: "https://klyro.co.in/?srsltid=AfmBOopTEtNFtCmLQw1NgKRQYoECTRXPFVHBwef5lRjR81rBMUUqfnwT"
   },
   {
     name: "Nexora",
     logo: "/images/newlogo/nexoralogo.png",
+    link: "https://www.nexora.com/"
   },
   {
     name: "Trevix",
     logo: "/images/newlogo/trevixlogo.png",
+    link: "https://www.trevixsystems.com/"
   },
   {
     name: "Zyra",
     logo: "/images/newlogo/zyralogo.png",
+    link: "https://www.thezyra.in/"
   },
   {
     name: "DROR",
     logo: null,
+    link: "#"
   },
   {
     name: "Parikh Renewables",
     logo: "/images/clientlogo/parikhlogo.png",
+    link: "https://www.parikhrenewable.com/"
   },
   {
     name: "VRP Global Partner",
     logo: "/images/clientlogo/vrplogo.png",
+    link: "#"
   }
 ];
 
@@ -72,9 +83,9 @@ export default function Clients() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-white/30 text-xs font-bold tracking-[0.3em] uppercase italic"
+            className="text-white/30 text-xs font-bold tracking-[0.3em] uppercase italic font-outfit"
           >
-            Trusted by Industry Leaders
+            Trusted by Visionary Startups
           </motion.h2>
         </div>
 
@@ -96,11 +107,13 @@ export default function Clients() {
               }}
               className="flex items-center gap-12 px-4 min-w-max"
             >
-              {/* Multiplying the list for seamless loop */}
               {[...clients, ...clients, ...clients, ...clients].map((client, i) => (
-                <div
+                <a
                   key={i}
-                  className="relative flex-shrink-0 w-44 h-20 flex items-center justify-center opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-500"
+                  href={client.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex-shrink-0 w-44 h-20 flex items-center justify-center opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-500 z-20 cursor-pointer"
                 >
                   <div className="relative w-full h-full p-4 flex items-center justify-center">
                     {client.logo ? (
@@ -117,7 +130,7 @@ export default function Clients() {
                       </span>
                     )}
                   </div>
-                </div>
+                </a>
               ))}
             </motion.div>
           </div>
