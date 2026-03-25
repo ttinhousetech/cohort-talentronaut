@@ -1,6 +1,6 @@
 "use client";
 
-import { Twitter, Github, Disc as Discord, Mail } from "lucide-react";
+import { Linkedin, Instagram, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,10 +28,22 @@ export default function Footer() {
               We transform ideas into market-ready MVPs in 11 days. No fluff, no theory, just execution.
             </p>
             <div className="flex gap-4">
-              <SocialLink href="#" icon={<Twitter className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Github className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Discord className="w-4 h-4" />} />
-              <SocialLink href="mailto:hello@talentronaut.com" icon={<Mail className="w-4 h-4" />} />
+              <SocialLink 
+                href="https://www.linkedin.com/company/talentronaut-technologies-private-limited/posts/?feedView=all" 
+                icon={<Linkedin className="w-4 h-4" />} 
+              />
+              <SocialLink 
+                href="https://www.instagram.com/talentronaut/" 
+                icon={<Instagram className="w-4 h-4" />} 
+              />
+              <SocialLink 
+                href="mailto:support@talentronaut.in" 
+                icon={<Mail className="w-4 h-4" />} 
+              />
+              <SocialLink 
+                href="tel:+918220324802" 
+                icon={<Phone className="w-4 h-4" />} 
+              />
             </div>
           </div>
 
@@ -41,8 +53,10 @@ export default function Footer() {
             <ul className="space-y-4">
               <FooterLink href="#process">Process</FooterLink>
               <FooterLink href="#who">Who It's For</FooterLink>
+              <FooterLink href="#clients">Clients</FooterLink>
+              <FooterLink href="#hired">Hired</FooterLink>
               <FooterLink href="#commitment">Commitment</FooterLink>
-              <FooterLink href="/apply">Apply Now</FooterLink>
+              <FooterLink href="https://forms.gle/xtfZ7jUtbDcZXCz56">Apply Now</FooterLink>
             </ul>
           </div>
 
@@ -61,7 +75,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col items-center justify-between gap-6 sm:flex-row">
           <span className="text-xs text-white/20 tracking-widest font-mono uppercase">
-            © 2024 COHORT TALENTRONAUT. ALL RIGHTS RESERVED.
+            © 2026 COHORT TALENTRONAUT. ALL RIGHTS RESERVED.
           </span>
           <span className="text-xs text-white/20 tracking-widest font-mono uppercase italic">
             BUILT FOR BUILDERS.

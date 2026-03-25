@@ -8,6 +8,8 @@ import Commitment from "@/components/Commitment";
 import Results from "@/components/Results";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
+import Clients from "@/components/Clients";
+import Hired from "@/components/Hired";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
@@ -24,6 +26,8 @@ export default function Home() {
       <Results />
       <FAQ />
       <CTA />
+      <Clients />
+      <Hired />
       <Testimonials />
       <Footer />
     </main>

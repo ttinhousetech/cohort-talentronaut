@@ -44,15 +44,20 @@ export default function Testimonials() {
     if (!container) return;
 
     const handleScroll = () => {
-      if (window.innerWidth < 768) {
-        const index = Math.round(container.scrollLeft / container.offsetWidth);
+      const scrollLeft = container.scrollLeft;
+      const width = container.offsetWidth;
+      // Account for gap (10px * 4 units in Tailwind is 40px)
+      const gap = 40; 
+      const index = Math.round(scrollLeft / (width + (window.innerWidth < 768 ? gap : 0)));
+      
+      if (index !== activeIndex) {
         setActiveIndex(index);
       }
     };
 
-    container.addEventListener("scroll", handleScroll);
+    container.addEventListener("scroll", handleScroll, { passive: true });
     return () => container.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [activeIndex]);
 
   return (
     <section className="bg-black py-24 sm:py-32 border-t border-white/5 relative overflow-hidden">
@@ -116,24 +121,6 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Mobile Dot Indicators */}
-          <div className="flex md:hidden justify-center items-center gap-3 mt-16">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  containerRef.current?.scrollTo({
-                    left: i * containerRef.current.offsetWidth,
-                    behavior: "smooth"
-                  });
-                }}
-                className={`
-                  h-1 transition-all duration-500 rounded-full
-                  ${activeIndex === i ? 'w-10 bg-accent' : 'w-2 bg-white/10'}
-                `}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
