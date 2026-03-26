@@ -89,11 +89,11 @@ export default function Clients() {
           </motion.h2>
         </div>
 
-        {/* Logo Slider / Marquee */}
-        <div className="relative group/marquee overflow-hidden">
+        {/* Logo Slider / Marquee - Row 1 (Right to Left) */}
+        <div className="relative group/marquee overflow-hidden mb-8">
           {/* Fading gradients on edges */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10" />
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10" />
           
           <div className="flex overflow-hidden">
             <motion.div 
@@ -101,31 +101,78 @@ export default function Clients() {
                 x: ["0%", "-50%"] 
               }}
               transition={{ 
-                duration: 25, 
+                duration: 30, 
                 repeat: Infinity, 
                 ease: "linear" 
               }}
-              className="flex items-center gap-12 px-4 min-w-max"
+              className="flex items-center gap-6 md:gap-12 px-4 min-w-max"
             >
-              {[...clients, ...clients, ...clients, ...clients].map((client, i) => (
+              {[...clients.slice(0, 6), ...clients.slice(0, 6), ...clients.slice(0, 6), ...clients.slice(0, 6)].map((client, i) => (
                 <a
                   key={i}
                   href={client.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative flex-shrink-0 w-44 h-20 flex items-center justify-center opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-500 z-20 cursor-pointer"
+                  className="relative flex-shrink-0 w-[28vw] md:w-44 h-12 md:h-20 flex items-center justify-center opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-500 z-20 cursor-pointer"
                 >
-                  <div className="relative w-full h-full p-4 flex items-center justify-center">
+                  <div className="relative w-full h-full p-2 md:p-4 flex items-center justify-center">
                     {client.logo ? (
                       <Image 
                         src={client.logo}
                         alt={client.name}
                         fill
-                        sizes="200px"
+                        sizes="(max-width: 768px) 30vw, 200px"
                         className="object-contain"
                       />
                     ) : (
-                      <span className="text-white font-minion text-4xl tracking-tighter whitespace-nowrap">
+                      <span className="text-white font-minion text-xl md:text-4xl tracking-tighter whitespace-nowrap">
+                        {client.name}
+                      </span>
+                    )}
+                  </div>
+                </a>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Logo Slider / Marquee - Row 2 (Left to Right) */}
+        <div className="relative group/marquee overflow-hidden">
+          {/* Fading gradients on edges */}
+          <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10" />
+          
+          <div className="flex overflow-hidden">
+            <motion.div 
+              animate={{ 
+                x: ["-50%", "0%"] 
+              }}
+              transition={{ 
+                duration: 35, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+              className="flex items-center gap-6 md:gap-12 px-4 min-w-max"
+            >
+              {[...clients.slice(6), ...clients.slice(6), ...clients.slice(6), ...clients.slice(6)].map((client, i) => (
+                <a
+                  key={i}
+                  href={client.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex-shrink-0 w-[28vw] md:w-44 h-12 md:h-20 flex items-center justify-center opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-500 z-20 cursor-pointer"
+                >
+                  <div className="relative w-full h-full p-2 md:p-4 flex items-center justify-center">
+                    {client.logo ? (
+                      <Image 
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        sizes="(max-width: 768px) 30vw, 200px"
+                        className="object-contain"
+                      />
+                    ) : (
+                      <span className="text-white font-minion text-xl md:text-4xl tracking-tighter whitespace-nowrap">
                         {client.name}
                       </span>
                     )}
