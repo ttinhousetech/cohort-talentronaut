@@ -11,18 +11,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           {/* Logo & Description */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
+            <Link href="https://www.talentronaut.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 mb-6 w-fit group">
               <Image 
                 src="/images/newlogo.png" 
                 alt="Talentronaut Logo" 
                 width={32} 
                 height={32} 
-                className="w-6 h-6 object-contain"
+                className="w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="text-xl font-bold tracking-tight text-white font-minion">
-                Talentronaut
+              <span className="text-xl font-bold tracking-tight font-minion flex items-center">
+                <span className="text-[#ec5840]">Talent</span>
+                <span className="text-[#606060]">ronaut</span>
               </span>
-            </div>
+            </Link>
             <p className="text-white/40 max-w-sm leading-relaxed mb-8">
               The acceleration program designed for high-conviction founders. 
               We transform ideas into market-ready MVPs in 11 days. No fluff, no theory, just execution.

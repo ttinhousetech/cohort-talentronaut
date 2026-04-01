@@ -108,16 +108,24 @@ export default function Testimonials() {
           {/* Main Grid / Slider - Enhanced Depth */}
           <div 
             ref={containerRef}
-            className="
-              grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto
-              overflow-x-auto snap-x snap-mandatory scrollbar-hide
-              flex md:grid
-            "
+            className="flex md:grid flex-nowrap md:grid-cols-3 gap-6 sm:gap-10 max-w-6xl mx-auto overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 px-4 sm:px-0"
           >
             {testimonials.map((t, i) => (
-              <div key={i} className="min-w-full md:min-w-0 snap-center px-2 sm:px-0">
+              <div key={i} className="w-[85vw] sm:w-[400px] md:w-auto snap-center shrink-0">
                 <TestimonialCard data={t} delay={0.2 + i * 0.1} />
               </div>
+            ))}
+          </div>
+
+          {/* Mobile Scroll Indicators */}
+          <div className="flex md:hidden justify-center items-center gap-2 mt-4">
+            {testimonials.map((_, i) => (
+              <div
+                key={i}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === activeIndex ? "w-6 bg-accent" : "w-1.5 bg-white/20"
+                }`}
+              />
             ))}
           </div>
 
