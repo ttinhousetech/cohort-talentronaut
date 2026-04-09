@@ -39,7 +39,7 @@ export default function Navbar() {
             { name: 'Process', href: '#process' },
             { name: "Mentors", href: '#who' },
             { name: "Clients", href: '#clients' },
-            { name: "Hired", href: '#hired' },
+            // { name: "Hired", href: '#hired' },
             { name: 'FAQ', href: '#faq' }
           ].map((item, i) => (
             <motion.a
