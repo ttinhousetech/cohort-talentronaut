@@ -62,7 +62,7 @@ export default function Navbar() {
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         >
           <a 
-            href="https://forms.gle/xtfZ7jUtbDcZXCz56"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdT3LYQ5Oin00qFBfnqIniAg1tgCILy0wbdGtSMmPlq1qb4AQ/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-black px-6 py-3 sm:px-8 sm:py-4 text-[10px] font-black tracking-[0.2em] uppercase hover:bg-accent hover:text-white transition-all transform active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.05)] text-center"

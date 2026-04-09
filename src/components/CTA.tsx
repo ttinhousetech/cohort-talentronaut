@@ -55,7 +55,7 @@ export default function CTA() {
           transition={{ delay: 0.3 }}
         >
           <a 
-            href="https://forms.gle/xtfZ7jUtbDcZXCz56"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdT3LYQ5Oin00qFBfnqIniAg1tgCILy0wbdGtSMmPlq1qb4AQ/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-accent px-10 py-5 font-bold text-sm tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-95 w-full sm:w-fit text-center"

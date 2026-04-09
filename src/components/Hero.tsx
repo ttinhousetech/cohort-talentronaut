@@ -121,7 +121,7 @@ export default function Hero() {
             className="mt-16 flex flex-col sm:flex-row gap-8"
           >
             <a 
-              href="https://forms.gle/xtfZ7jUtbDcZXCz56"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdT3LYQ5Oin00qFBfnqIniAg1tgCILy0wbdGtSMmPlq1qb4AQ/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative bg-[#fff] text-black px-12 py-5 font-bold text-sm tracking-[0.2em] uppercase transition-all hover:bg-accent hover:text-white shadow-[0_0_50px_rgba(255,255,255,0.1)] active:scale-95 w-full sm:w-fit overflow-hidden text-center"

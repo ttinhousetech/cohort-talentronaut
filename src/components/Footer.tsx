@@ -57,7 +57,7 @@ export default function Footer() {
               <FooterLink href="#clients">Clients</FooterLink>
               <FooterLink href="#hired">Hired</FooterLink>
               <FooterLink href="#commitment">Commitment</FooterLink>
-              <FooterLink href="https://forms.gle/xtfZ7jUtbDcZXCz56">Apply Now</FooterLink>
+              <FooterLink href="https://docs.google.com/forms/d/e/1FAIpQLSdT3LYQ5Oin00qFBfnqIniAg1tgCILy0wbdGtSMmPlq1qb4AQ/viewform?usp=dialog">Apply Now</FooterLink>
             </ul>
           </div>
 
