@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-[1000] bg-black/50 backdrop-blur-xl border-b border-white/5 h-20 sm:h-24">
       <div className="max-w-7xl mx-auto h-full px-4 sm:px-8 flex items-center justify-between">
         {/* Brand/Logo */}
-        <Link href="https://www.talentronaut.in/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.talentronaut.in/" target="_blank" rel="noopener noreferrer">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -30,7 +30,7 @@ export default function Navbar() {
               <span className="text-[#606060]">ronaut</span>
             </span>
           </motion.div>
-        </Link>
+        </a>
 
         {/* Navigation Links - Staggered */}
         <div className="hidden md:flex items-center gap-12">
