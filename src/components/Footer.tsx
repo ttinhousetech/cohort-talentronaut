@@ -68,7 +68,7 @@ export default function Footer() {
               <FooterLink href="https://www.talentronaut.in/legal/privacy">Privacy Policy</FooterLink>
               <FooterLink href="https://www.talentronaut.in/legal/terms">Terms of Service</FooterLink>
               <FooterLink href="https://www.talentronaut.in/legal/cookies">Cookie Policy</FooterLink>
-              <FooterLink href="#">Contact Us</FooterLink>
+              <FooterLink href="https://docs.google.com/forms/d/e/1FAIpQLSdT3LYQ5Oin00qFBfnqIniAg1tgCILy0wbdGtSMmPlq1qb4AQ/viewform?usp=dialog">Contact Us</FooterLink>
             </ul>
           </div>
         </div>
